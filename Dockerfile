@@ -8,7 +8,7 @@ WORKDIR /hath
 COPY start.sh ./
 
 RUN apk upgrade \
-    && apk add wget unzip openjdk8-jre  \
+    && apk add wget unzip openjdk8-jre sqlite \
     && wget "https://repo.e-hentai.org/hath/${HATH_ZIP_NAME}" \
     && [ "$HATH_ZIP_SHA256" == $( sha256sum $HATH_ZIP_NAME  | cut -c 1-64 ) ] \
     && unzip $HATH_ZIP_NAME \
