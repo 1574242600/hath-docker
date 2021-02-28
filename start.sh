@@ -7,7 +7,7 @@ done
 if [ -n "$1" ] && [ -n "$2" ]; then
     mkdir ./data  \
     && echo -n "${1}-${2}" > ./data/client_login  \
-    && java -jar HentaiAtHome.jar --port 443 $HATH_PARAMS
+    && java -jar HentaiAtHome.jar --port=443 $HATH_PARAMS
 fi
 
 
